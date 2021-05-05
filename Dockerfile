@@ -10,4 +10,9 @@ COPY . .
 
 EXPOSE 8080
 
+
+USER node
+
+COPY --chown=node:node . /usr/src/app
+
 CMD [ "node", "server.js" ]
