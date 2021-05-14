@@ -15,4 +15,4 @@ USER node
 
 COPY --chown=node:node . /usr/src/app
 
-CMD [ "node", "server.js" ]
+CMD [ "npm", "run", "dev" ]
