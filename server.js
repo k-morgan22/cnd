@@ -1,13 +1,15 @@
-const http = require('http');
+const express = require('express')
+const helmet = require('helmet')
 
-const HOST = "0.0.0.0";
-const PORT = 8080;
+const app = express()
+const port = 8080
 
-const server = http.createServer((req, res) => {
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.end('Hello World\n');
-});
+app.use(helmet())
 
-server.listen(PORT, HOST, () => {
-    console.log(`Server running at http://${HOST}:${PORT}/`);
-});
+app.get('/', (req, res) => {
+  res.send('Hello World Josh!')
+})
+
+app.listen(port, () => {
+  console.log(`Server listening at http://localhost:${port}`)
+})
