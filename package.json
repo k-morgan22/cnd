@@ -12,7 +12,9 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "helmet": "^4.6.0"
+    "helmet": "^4.6.0",
+    "http-proxy-middleware": "^2.0.0",
+    "mongoose": "^5.12.12"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"

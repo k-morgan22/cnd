@@ -35,7 +35,7 @@ $oldContainerId = docker ps -aqf "name=$containerName"
 
 if($oldContainerId){
     Write-Host "Cleaning up running or exited container"
-     
+     #can't i replace code below with docker-compose down? 
     docker stop $oldContainerId
     docker rm $oldContainerId
 }
